@@ -9,7 +9,7 @@
 
 
 int show_image = 1;
-int step_by_step = 0;
+int step_by_step = 1;
 //计时的时候别开逐步
 
 
@@ -69,7 +69,7 @@ int main()
         {
             if (step_by_step) getch();
 
-            if (showimage) system("cls");
+            if (show_image) system("cls");
 
             if (f[i] > f[p])
             {
@@ -78,7 +78,7 @@ int main()
                 f[p] = t;
             }
 
-            if (showimage) printgr(f);
+            if (show_image) printgr(f);
         }
     }
     end = clock();
@@ -95,7 +95,7 @@ int main()
         {
             if (step_by_step) getch();
 
-            if (showimage) system("cls");
+            if (show_image) system("cls");
 
             if (f[p] > f[p + 1])
             {
@@ -104,7 +104,7 @@ int main()
                 f[p + 1] = t;
             }
 
-            if (showimage) printgr(f);
+            if (show_image) printgr(f);
         }
     }
     end = clock();
@@ -125,7 +125,7 @@ int main()
             {
                 if (step_by_step) getch();
 
-                if (showimage) system("cls");
+                if (show_image) system("cls");
                 
                 if (f[i] < s[p])
                 {
@@ -135,7 +135,7 @@ int main()
                     }
                     s[p] = f[i];
 
-                    if (showimage) printgr(s);
+                    if (show_image) printgr(s);
 
                     break;
                 }
@@ -143,8 +143,10 @@ int main()
                 if (p == i - 1)
                 {
                     s[p + 1] = f[i];
-                    if (showimage) printgr(s);
+                    
                 }
+
+                if (show_image) printgr(s);
             }
         }
     }
@@ -179,7 +181,7 @@ void qsss(int a[10], int left, int right)
 
             if (step_by_step) getch();
 
-            if (showimage) system("cls");
+            if (show_image) system("cls");
 
             if (m <= n)
             {
@@ -190,7 +192,7 @@ void qsss(int a[10], int left, int right)
                 n--;
             }
 
-            if (showimage) printgr(a);
+            if (show_image) printgr(a);
         }
 
         if (m < right) qsss(a, m, right);
